@@ -5,15 +5,15 @@
 {% block title %}
    {{block.super}} - Sample App
 {% endblock title %}
-    
+
 
 {% block style %}
-    {{block.super}}
-   <link rel="stylesheet" href="{% static 'sample_app/css/index.css' %}"> 
+{{block.super}}
+<link rel="stylesheet" href="{% static 'sample_app/css/index.css' %}"> 
 {% endblock style %}
-     
+
 
 {% block body %}
-    <h1 class="bg-primary">Sample Home</h1>
+{% include 'sample_app/navbar/index.html' with home="Sample App" %}
 {% endblock body %}
     
