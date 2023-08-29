@@ -14,6 +14,16 @@
     
 
 {% block body %}
-    <h1>Hello</h1>
+
+<!-- <a href="sample_app/"><i class="fa-solid fa-house"></i>Sample App</a><br>
+
+<a href={{s_a}}><i class="fa-solid fa-house"></i>Sample App</a><br> -->
+
+<!-- <a href="{% url 'sample_app' %}"><i class="fa-solid fa-house"></i>Sample App</a><br> -->
+
+{% url 'sample_app' as SA %}
+<a href={{SA}}><i class="fa-solid fa-house"></i>Sample App</a><br>
+
+
 {% endblock body %}
     
