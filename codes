@@ -1,0 +1,2 @@
+python manage.py sqlmigrate app_name 001
+python3 manage.py showmigration

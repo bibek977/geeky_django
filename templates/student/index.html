@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Home</title>
+</head>
+<body>
+    {% if std %}
+    {% for i in std %}
+        <h1>{{i.id}}</h1>
+        <h1>{{i.sid}}</h1>
+        <h1>{{i.sname}}</h1>
+        <h1>{{i.semail}}</h1>
+        <h1>{{i.spass}}</h1>
+        <h1>{{i.comment}}</h1>
+    {% endfor %}
+    {% else %}
+        <h1>No data</h1>
+    {% endif %}
+</body>
+</html>
