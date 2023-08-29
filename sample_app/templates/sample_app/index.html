@@ -1,0 +1,20 @@
+{% extends 'sample_app/base.html' %}
+
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'sample_app/css/index.css' %}">
+{% endblock style %}
+    
+
+{% block title %}
+
+    {{block.super}} - Home
+    
+{% endblock title %}
+    
+
+{% block body %}
+    <h1>Hello</h1>
+{% endblock body %}
+    
