@@ -8,3 +8,6 @@ class Student(models.Model):
 
     # after migrate have to give default value
     comment = models.CharField(max_length=50,default="not available")
+
+    # def __str__(self):
+    #     return self.sname
