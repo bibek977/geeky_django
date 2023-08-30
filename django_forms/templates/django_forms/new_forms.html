@@ -1,0 +1,50 @@
+{% extends 'django_forms/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'django_forms/index.css' %}">
+{% endblock stylesheet %}
+
+    
+
+{% block body %}
+<h1>form</h1>
+
+{% comment %} 
+    {{forms.sname.label}}
+    {{forms.sid.label}}
+
+    {{forms.semail.label_tag}}
+    
+    {{forms.sname.id_for_label}}
+
+    {{forms.colz_name.value}}
+    {{forms.semail.value}}
+
+    {{forms.sname.html_name}}
+    {{forms.sname.help_text}}
+    {{forms.sname.field.help_text}} {% endcomment %}
+
+    <form action="">
+        <div>
+            <label for="{{forms.sid.id_for_label}}">Student Id : </label>
+            {{forms.sid}}
+        </div>
+
+        <div>
+            {{forms.sname.label}}
+            {% comment %} {{forms.sname.label_tag}} {% endcomment %}
+            {{forms.sname}}
+        </div>
+
+        <div>
+            {{forms.colz_name.value}}
+            <br>
+            {{forms.spass.help_text}}
+            <br>
+            {{forms.sname.field.required}}
+        </div>
+    </form>
+
+{% endblock body %}
+    

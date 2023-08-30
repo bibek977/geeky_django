@@ -1,0 +1,44 @@
+{% extends 'django_forms/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'django_forms/index.css' %}">
+{% endblock stylesheet %}
+
+    
+
+{% block body %}
+<h1>form</h1>
+
+{% comment %} {{forms.as_table}} {% endcomment %}
+
+{{forms.as_p}}
+
+{% comment %} {{forms.as_ul}} {% endcomment %}
+
+{% comment %} {{forms.sid}} {% endcomment %}
+
+{% comment %} <form action="" method='post'>
+
+    {% for i in forms %}
+    {{i.label}}
+    
+    {{i}}
+    <br>
+    {% endfor %}
+
+    <button type="submit">Submit</button>
+</form> {% endcomment %}
+
+
+{% comment %} <form action="">
+    <table>
+        {{forms}}
+    </table>
+</form> {% endcomment %}
+
+    
+
+
+{% endblock body %}
+    
