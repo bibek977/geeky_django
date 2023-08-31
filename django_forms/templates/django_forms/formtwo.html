@@ -1,0 +1,21 @@
+{% extends 'django_forms/base.html' %}
+
+
+{% block body %}
+    {% for field in forms %}
+        {% comment %} {{field.label}} {% endcomment %}
+        {{field.label_tag}}
+        {{field}}
+    {% endfor %}
+    <br>
+    {% for field in forms.visible_fields %}
+        {{field.label_tag}}
+        {{field}}
+    {% endfor %}
+    <br>
+    {% for field in forms.hidden_fields %}
+        {{field.label_tag}}
+        {{field}}
+    {% endfor %}
+{% endblock body %}
+    

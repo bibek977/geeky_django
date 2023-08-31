@@ -8,5 +8,6 @@ urlpatterns = [
     path('',views.index, name="home"),
     path('sample_app/', include('sample_app.urls')),
     path('student',include('student.urls')),
-    path('django_forms/', include('django_forms.urls'))
+    path('django_forms/', include('django_forms.urls')),
+    path('django_forms_submit/', include('django_forms_submit.urls')),
 ]

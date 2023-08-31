@@ -1,0 +1,20 @@
+{% extends 'django_forms/base.html' %}
+
+
+{% block title %}
+    django_forms_submit
+{% endblock title %}
+    
+{% block body %}
+
+    <form action="" method="post" novalidate>
+
+        {% csrf_token %}
+
+        {{forms}}
+
+        <button type="submit">Submit</button>
+    </form>
+
+{% endblock body %}
+    

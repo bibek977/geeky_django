@@ -43,7 +43,8 @@ EXTERNAL_APPS = [
     'sample_app',
     'core',
     'student',
-    'django_forms'
+    'django_forms',
+    "django_forms_submit",
 ]
 
 INSTALLED_APPS += EXTERNAL_APPS

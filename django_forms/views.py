@@ -26,3 +26,16 @@ def std_forms(request):
 def new_forms(request):
     fm = StudentForm()
     return render(request,'django_forms/new_forms.html',{'forms':fm})
+
+# def new_forms(request):
+#     fm = StudentTwoForm()
+#     return render(request,'django_forms/formtwo.html',{'forms':fm})
+
+
+def new_forms(request):
+    fm = StudentThreeForm(initial={'sid':161743})
+    return render(request,'django_forms/formthree.html',{'forms':fm})
+
+def new_forms(request):
+    fm = StudentFourForm(initial={'sid':161743})
+    return render(request,'django_forms/formthree.html',{'forms':fm})
