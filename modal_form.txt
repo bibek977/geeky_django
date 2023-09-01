@@ -1,0 +1,8 @@
+MODEL ==> blank = True
+FORM ==> required = False
+
+MODEL ==> name
+FORM ==> label 
+
+MODEL ==> help_text
+FORM ==> help_text

@@ -1,11 +1,39 @@
 {% extends 'django_forms/base.html' %}
 
 
+{% block style %}
+    .errorlist{
+        list-style : none;
+        color:red;
+    }
+{% endblock style %}
+    
+
 {% block body %}
 
 <form action="" method="post" novalidate>
     {% csrf_token %}
-    {{forms.as_p}}
+
+    {% comment %} {{forms}} {% endcomment %}
+
+    {% comment %} {{forms.as_p}} {% endcomment %}
+
+    {{forms.non_field_errors}}
+        {% for field in forms %}
+        <div>
+
+            {% comment %} {{field.label_tag}} {{field}} {{field.errors}} {% endcomment %}
+
+            {{field.label_tag}} {{field}}
+
+            {% comment %} <span class="errorlist"> {{field.errors|striptags}} </span> {% endcomment %}
+
+            {% for error in field.errors %}
+                <span class="errorlist">{{error}}</span>
+            {% endfor %}
+            
+        </div>
+        {% endfor %}
     <button type="submit">Submit</button>
 </form>
 

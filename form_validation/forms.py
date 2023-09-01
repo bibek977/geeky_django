@@ -42,7 +42,7 @@ class StudentTwoForm(forms.Form):
     semail = forms.CharField(validators=[validators.MaxLengthValidator(5)])
 
     sroll = forms.IntegerField()
-    
+
     def clean(self):
         cleaned_data = super().clean()
 
@@ -51,3 +51,13 @@ class StudentTwoForm(forms.Form):
 
         if sid == sroll:
             raise forms.ValidationError("id and roll no are  same")
+        
+
+class StudentThreeForm(forms.Form):
+
+    error_css_class = 'error_css'
+    required_css_class = 'required_css'
+
+    sid = forms.IntegerField(error_messages={"required" : "Student Id is required"})
+    sname = forms.CharField(max_length=100, min_length=5, error_messages={'required':'student name is always required', 'min_length':'student name should be greater than 5 letters'})
+    semail = forms.EmailField(min_length=5,error_messages={"required" : "Email of student must be given", 'min_length':'student name should be greater than 5 letters'})

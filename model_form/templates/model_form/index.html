@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+
+{% block inline-css %}
+    h1{
+        background-color:red;
+    }
+{% endblock inline-css %}
+
+
+
+{% block body %}
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+
+            {{form.as_p}}
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock body %}
+    
