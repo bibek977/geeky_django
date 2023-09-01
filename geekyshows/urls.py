@@ -10,4 +10,5 @@ urlpatterns = [
     path('student',include('student.urls')),
     path('django_forms/', include('django_forms.urls')),
     path('django_forms_submit/', include('django_forms_submit.urls')),
+    path('form_validation/',include("form_validation.urls")),
 ]
