@@ -1,0 +1,8 @@
+{% extends 'core/base.html' %}
+
+
+{% block body %}
+    <a href="{% url 'item' 5 %}">ID</a>
+    <a href="{% url 'sub_item' 9 9 %}">SUB ID</a>
+{% endblock body %}
+    

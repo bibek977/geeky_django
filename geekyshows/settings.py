@@ -47,6 +47,7 @@ EXTERNAL_APPS = [
     "django_forms_submit",
     "form_validation",
     "model_form",
+    "django_urls",
 ]
 
 INSTALLED_APPS += EXTERNAL_APPS

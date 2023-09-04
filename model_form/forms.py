@@ -29,3 +29,20 @@ class InternForm(forms.ModelForm):
                 }
             )
         }
+
+
+class InternNewForm(forms.ModelForm):
+
+    program = forms.CharField(max_length=50)
+
+    class Meta:
+        model = Intern
+        # fields = "__all__"
+        exclude = ['program']
+
+
+class InternInheritanceForm(InternForm):
+
+    class Meta(InternForm.Meta):
+
+        fields = ['phone', 'name']

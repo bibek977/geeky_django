@@ -20,9 +20,41 @@
 <a href={{s_a}}><i class="fa-solid fa-house"></i>Sample App</a><br> -->
 
 <!-- <a href="{% url 'sample_app' %}"><i class="fa-solid fa-house"></i>Sample App</a><br> -->
+<div class="div">
 
-{% url 'sample_app' as SA %}
-<a href={{SA}}><i class="fa-solid fa-house"></i>Sample App</a><br>
+    {% url 'sample_app' as SA %}
+    <a href={{SA}}><i class="fa-solid fa-house"></i>Sample App</a><br>
+</div>
+
+<div class="div">
+    <a href="{% url 'student' %}">student</a>
+</div>
+
+<div class="div">
+    <a href="{% url 'std_forms' %}">django_forms</a>
+</div>
+
+<div class="div">
+    <a href="{% url 'django_forms_submit' %}">django_forms_submit</a>
+</div>
+
+<div class="div">
+    <a href="{% url 'form_validation' %}">form_validation</a>
+</div>
+
+<div class="div">
+    <a href="{% url 'model_form' %}">model_form</a>
+</div>
+
+<div class="div">
+    <a href="{% url 'django_urls' %}">django_urls</a>
+</div>
+
+{% comment %} 
+<div class="div">
+    <a href="{% url '' %}"></a>
+</div> {% endcomment %}
+
 
 
 {% endblock body %}
