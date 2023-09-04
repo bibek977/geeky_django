@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+
+{% block body %}
+
+{% if messages %}
+    {% for m in messages %}
+        <div class="div">
+            <div class="alert {% if m.tags %} alert-{{m.tags}} {% endif %} alert-dismissible fade show" role="alert">
+                {{m}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock body %}
+    

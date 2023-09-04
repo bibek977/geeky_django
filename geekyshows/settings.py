@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+# to change message default tag
+from django.contrib.messages import constants as messages
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -48,6 +51,7 @@ EXTERNAL_APPS = [
     "form_validation",
     "model_form",
     "django_urls",
+    'django_messages',
 ]
 
 INSTALLED_APPS += EXTERNAL_APPS
@@ -135,3 +139,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# custom settings for message tags
+MESSAGE_TAGS = {
+    messages.ERROR : 'danger',
+}
