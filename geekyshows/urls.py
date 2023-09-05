@@ -15,4 +15,5 @@ urlpatterns = [
     path('django_urls/',include('django_urls.urls')),
     path('django_messages/',include('django_messages.urls')),
     path('auth_user/',include('auth_user.urls')),
+    path('custom_auth/',include('custom_auth.urls')),
 ]

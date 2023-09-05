@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+
+{% block body %}
+
+    <h1>user change form</h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div {% if message.tags %} class="alert alert-{{message.tags}}" {% endif %}>
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                {{error}}
+            {% endfor %}
+        {% endif %}
+
+        {% for fm in form %}
+        <div class="p-2">
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
+        </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock body %}
+    
