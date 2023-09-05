@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+
+    Home Page
+    
+{% endblock title %}
+    
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'core/css/index.css' %} ">
+{% endblock style %}
+    
+
+{% block body %}
+
+{% if messages %}
+    {% for message in messages %}
+        {{message}}
+    {% endfor %}
+{% else %}
+{{request.user}}
+{% endif %}
+
+<div class="div">
+<div class="div">
+    <a href="{% url 'auth_user' %}">auth_user</a>
+</div>
+
+
+<div class="div">
+    <a href="{% url 'user_creation' %}">user_creation</a>
+</div>
+
+<div class="div">
+    <a href="{% url 'password_change' %}">password_change</a>
+</div>
+
+<div class="div">
+    <a href="{% url 'user_logout' %}">Logout</a>
+</div>
+
+
+
+
+{% endblock body %}
+    

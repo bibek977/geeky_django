@@ -15,6 +15,8 @@
 
 {% block body %}
 
+
+
 <!-- <a href="sample_app/"><i class="fa-solid fa-house"></i>Sample App</a><br>
 
 <a href={{s_a}}><i class="fa-solid fa-house"></i>Sample App</a><br> -->
@@ -53,6 +55,16 @@
 <div class="div">
     <a href="{% url 'django_messages' %}">messages_home</a>
 </div>
+
+<div class="div">
+    <a href="{% url 'auth_user' %}">auth_user</a>
+</div>
+
+
+<div class="div">
+    <a href="{% url 'user_logout' %}">Logout</a>
+</div>
+
 
 {% comment %} 
 <div class="div">

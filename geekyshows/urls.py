@@ -14,4 +14,5 @@ urlpatterns = [
     path('model_form/',include("model_form.urls")),
     path('django_urls/',include('django_urls.urls')),
     path('django_messages/',include('django_messages.urls')),
+    path('auth_user/',include('auth_user.urls')),
 ]

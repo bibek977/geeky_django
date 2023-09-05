@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+
+{% block body %}
+
+    <h1>user creation form</h1>
+    {% comment %} <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form> {% endcomment %}
+
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {% for fm in form %}
+        <div class="p-2">
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
+        </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock body %}
+    
