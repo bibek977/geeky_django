@@ -8,3 +8,11 @@ class CustomUserChange(UserChangeForm):
     class Meta:
         model = User
         fields = ["username", 'first_name', 'last_name', 'email', 'date_joined', 'last_login']
+
+class CustomAdminChange(UserChangeForm):
+    password = None
+
+    class Meta:
+        model = User
+        # fields = "__all__"
+        exclude = ['password']

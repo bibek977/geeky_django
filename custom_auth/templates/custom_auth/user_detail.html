@@ -29,14 +29,5 @@
         {% endfor %}
         <button type="submit">Submit</button>
     </form>
-
-    {% comment %} {% if user %} {% endcomment %}
-    {% if user != None %}
-        {% for u in user %}
-            <div class="div">
-                <a href="{% url 'user_detail' u.username %}">{{u.username}}</a>
-            </div>
-        {% endfor %}
-    {% endif %}
 {% endblock body %}
     
