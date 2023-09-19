@@ -54,6 +54,7 @@ EXTERNAL_APPS = [
     'django_messages',
     'auth_user',
     'custom_auth',
+    'base_model'
 ]
 
 INSTALLED_APPS += EXTERNAL_APPS
